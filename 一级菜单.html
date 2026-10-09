@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>一级菜单</title>
+    <style>
+        /*全局重置，清除默认圆点、边距*/
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .nav {
+            background-color: #333333;
+        }
+        /*一级ul横向排列 flex*/
+        .nav > ul {
+            display: flex;
+        }
+        .nav > ul > li > a {
+            display: block;
+            padding:15px 16px;
+            color:white;
+            text-decoration:none;
+        }
+        /*鼠标悬浮背景变色*/
+        .nav > ul > li > a:hover {
+            background-color:#0066cc;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">教学院(部)</a></li>
+        <li><a href="#">党群机构</a></li>
+        <li><a href="#">行政教辅机构</a></li>
+        <li><a href="#">教学科研</a></li>
+        <li><a href="#">招生就业</a></li>
+        <li><a href="#">国际交流</a></li>
+        <li><a href="#">数字图书馆</a></li>
+    </ul>
+</div>
+</body>
+</html>

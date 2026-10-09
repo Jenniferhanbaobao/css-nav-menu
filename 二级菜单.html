@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>二级菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .nav{
+            width:900px;
+            margin:30px auto;
+        }
+        /*一级菜单ul横向排列*/
+        .nav > ul {
+            display: flex;
+            background-color:#222;
+        }
+        /*一级li：加relative，作为二级菜单定位基准*/
+        .nav > ul > li {
+            position:relative;
+        }
+        /*一级菜单链接样式*/
+        .nav > ul > li > a {
+            display:block;
+            padding:14px 16px;
+            color:#fff;
+            text-decoration:none;
+        }
+        .nav > ul > li > a:hover {
+            background:#0066cc;
+        }
+        /*二级菜单默认隐藏，absolute脱离文档流*/
+        .nav > ul > li > ul {
+            position:absolute;
+            top:100%;
+            left:0;
+            background:#444;
+            display:none;
+        }
+        .nav > ul > li > ul > li > a {
+            display:block;
+            padding:12px 16px;
+            color:white;
+            text-decoration:none;
+            white-space:nowrap;
+        }
+        .nav > ul > li > ul > li > a:hover {
+            background:#0088ee;
+        }
+        /*悬浮一级li，二级菜单显示*/
+        .nav > ul > li:hover > ul {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a href="#">首页</a></li>
+        <li>
+            <a href="#">教学院(部)</a>
+            <ul>
+                <li><a href="#">计算机与电气工程学院</a></li>
+                <li><a href="#">芙蓉学院</a></li>
+            </ul>
+        </li>
+        <li><a href="#">党群机构</a></li>
+        <li><a href="#">行政教辅机构</a></li>
+        <li><a href="#">教学科研</a></li>
+        <li><a href="#">招生就业</a></li>
+        <li><a href="#">国际交流</a></li>
+        <li><a href="#">数字图书馆</a></li>
+    </ul>
+</div>
+</body>
+</html>
